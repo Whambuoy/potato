@@ -20,7 +20,10 @@ Route::get('/add_product', function(){
 });
 
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/my_products', 'ProductsController@index');
+
+Route::resource('product', 'ProductsController');
